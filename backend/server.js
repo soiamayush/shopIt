@@ -25,7 +25,7 @@ process.on("uncaughtException", err => {
 })
 // console.log(a) // error should be below uncaughtexception code
 
-dotenv.config({  path : "backend/config/config.env"})
+// dotenv.config({  path : "backend/config/config.env"})
 
 //SETTING UP cloudinary configuration
 cloudinary.config({
