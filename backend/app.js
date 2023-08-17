@@ -5,11 +5,13 @@ const cookieParser = require("cookie-parser")
 const bodyParser = require("body-parser") // added while implementing cloudinary
 const fileUpload = require("express-fileupload")
 const path = require("path")// for deployment
+const dotenv = require("dotenv")
 
-
-
+ 
 const errorMiddleware = require("./middlewares/error")
-if (process.env.NODE_ENV !== 'PRODUCTION') require('dotenv').config({ path: 'backend/config/config.env' }) // for deployment
+dotenv.config({ path : 'backend/config/config.env'}) // for development
+// if (process.env.NODE_ENV !== 'PRODUCTION') require('dotenv').config({ path: 'backend/config/config.env' })
+ // for production
 
 
 

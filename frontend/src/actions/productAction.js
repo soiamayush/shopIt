@@ -87,7 +87,7 @@ export const getAdminProduct = () => async (dispatch) => {
             type : ADMIN_PRODUCTS_FAIL,
             payload : error.response.data.message
         })
-    }
+    } 
 }
 
 export const newProduct = (productData) => async (dispatch) => {

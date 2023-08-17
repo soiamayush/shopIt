@@ -23,7 +23,7 @@ exports.registerUser = catchAsyncError (async (req, res, next) => {
         password,
         avatar : {
             public_id : result.public_id,
-            url : result.secure_url
+            url : result.secure_url 
         }
     })
 
@@ -63,7 +63,6 @@ exports.loginUser = catchAsyncError (async (req, res, next) => {
     // })
 
     sendToken(user, 200, res);
-
 });
 
 //forgot  password : api/v1/password/forgot
@@ -80,8 +79,8 @@ exports.forgotPassword = catchAsyncError (async (req, res, next) =>  {
     const resetToken = user.getResetPasswordToken();
     await user.save({ validateBeforeSave : false});
 
-    const resetUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}` // for deployment
-    // const resetUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}` // for producttion 
+    // const resetUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}` // for deployment
+    const resetUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}` // for producttion 
 
     const message = `Your password reset token is as follows : \n\n${resetUrl}\n\nIf you have not requested email, then ignore it.`
 

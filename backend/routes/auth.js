@@ -10,7 +10,7 @@ const {
   getUserProfile,
   updateProfile,
   updatePassword,
-  getUserDetails,
+  getUserDetails, 
   updateUser,
   deleteUser,
   getAllUsers

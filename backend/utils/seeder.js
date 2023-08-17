@@ -25,7 +25,7 @@ const seedProducts = async () => {
 
 
     }catch(err){
-        console.log(err.message);
+        console.log(`seeder message :  ${err.message}`);
         process.exit();
     }
 }
